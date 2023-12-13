@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="vaadin-plain-auth-demo" version="3.0"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3_0.xsd">uth
+
+    <servlet>
+        <servlet-name>AppServlet</servlet-name>
+        <servlet-class>
+            com.github.isenseebastian.vaadinplainauthdemo.AppServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AppServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <init-param>
+        <!-- The heartbeat interval is specified in seconds. -->
+        <param-name>heartbeatInterval</param-name>
+        <param-value>30</param-value>
+    </init-param>
+
+    <init-param>
+        <!-- Close sessions when there are no more heartbeats or other requests from the browser. -->
+        <param-name>closeIdleSessions</param-name>
+        <param-value>true</param-value>
+    </init-param>
+
+</web-app>
